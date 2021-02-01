@@ -313,8 +313,7 @@
 		var gaWriteEvent = function(inputUrl){
 			// for writing "download" event to ga
 			if(!window.ga) return;
-			console.log(inputUrl)
-			console.log(repoExp)
+
 			var matches = inputUrl.match(repoExp);
 			if(matches.length){
 				var authorRepo = matches.slice(1, 3).join("/");
