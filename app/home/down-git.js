@@ -112,8 +112,7 @@ downGitModule.factory('downGitService', [
         }
 
         var getFile = function (path, url, files, requestedPromises, progress) {
-            console.log(url)
-            var promise = $http.get(url, { responseType: "arraybuffer" }).then(function (file) {
+            var promise = $http.jsonp(url, { responseType: "arraybuffer" }).then(function (file) {
                 files.push({ path: path, data: file.data });
                 progress.downloadedFiles.val = files.length;
             }, function (error) {
