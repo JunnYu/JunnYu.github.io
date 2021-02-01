@@ -463,7 +463,7 @@
 									downText = "下载文件";
 									getMethod = "getFileButtonClick";
 									onclickHTML = pathText;
-									urlText = item.download_url.replace("raw.githubusercontent.com","raw.fastgit.org");
+									urlText = item.download_url//.replace("raw.githubusercontent.com","raw.fastgit.org");
 				            	}else{
 				            		externalLink = true;
 				            		icon = '<span class="glyphicon glyphicon-link" aria-hidden="true"></span>';
